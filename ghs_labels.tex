@@ -1,0 +1,167 @@
+\documentclass{article}
+
+\usepackage{ghsystem}
+\usepackage{stackengine}
+\usepackage{adjustbox}
+\usepackage[sfdefault]{roboto} %looks cool
+\ghssetup{language=german}%edit for correct language
+
+\usepackage[newdimens]{labels}
+\LabelCols=2
+\LabelRows=5
+
+\LabelGridtrue % show grid for labels
+\InterLabelRow=2mm% Gap between rows of labels
+\InterLabelColumn=2mm%
+% Signal words.
+\newcommand{\achtung}{{\color{black}{\textbf{Achtung}}}}%edit for correct language
+\newcommand{\gefahr}{{\color{black}{\textbf{Gefahr}}}}%edit for correct language
+
+
+
+\begin{document}
+	\tolerance=1					%1 stops latex from making '-' cuts at the end of the line, only whole words
+	\emergencystretch=\maxdimen		%2	
+	\hyphenpenalty=10000			%3
+	\hbadness=10000					%4
+	       
+	       
+\newcommand{\txtsize}{\scriptsize}
+
+\newcommand{\Firm}{Firstname lastname -- adress -- tel. xxxx/xxxxxx\\
+	        organic chemistry -- University/Company}
+
+\newcommand{\filedate}{\number\day-\number\month-\number\year}
+
+\newcommand{\ghsh}[1]{\ghs{h}{#1}} %extra command to edit all at once
+\newcommand{\ghsp}[1]{\ghs[hide]{p}{#1}} %hides text
+\newcommand{\ghseuh}[1]{\ghs{euh}{#1}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\genericlabel{%
+	\raisebox{12em}{\parbox[t][10em][t]{80mm}{
+			
+			\textbf{\Large Aceton}
+			
+\parbox[t][59mm][t]{15mm}{\mbox{}\\
+				\ifthenelse{\isundefined{\ghspic{flame}}}{}{% correct names can be found in the documentation of ghsystem -> pictograms
+					\resizebox{12.5mm}{!}{\ghspic{flame}}}
+				\ifthenelse{\isundefined{\ghspic{exclam}}}{}{%
+					\resizebox{12.5mm}{!}{\ghspic{exclam}}}
+
+				
+}\hspace{4pt}%
+\parbox[t][30mm][t]{74mm}{\vspace*{5px} \txtsize
+	
+				\textbf{\normalsize\gefahr}\\[2pt]
+			
+				{\ghsh{225} \par \ghsh{319}\par \ghsh{336}\par \ghseuh{066}}\\[6pt]
+				{\ghsp{210}, \ghsp{240}, \ghsp{305+351+338}, \ghsp{403+233}}\\[2pt]
+				
+\vfill
+\rule[2pt]{74mm}{1pt}\\
+\tiny\Firm\hfill\filedate
+}}}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\genericlabel{%
+	\raisebox{12em}{\parbox[t][10em][t]{80mm}{
+			
+			\textbf{\Large Ethanol}
+			
+			\parbox[t][59mm][t]{15mm}{\mbox{}\\
+				\ifthenelse{\isundefined{\ghspic{flame}}}{}{%
+					\resizebox{12.5mm}{!}{\ghspic{flame}}}
+				\ifthenelse{\isundefined{\ghspic{exclam}}}{}{%
+					\resizebox{12.5mm}{!}{\ghspic{exclam}}}
+				
+			}\hspace{4pt}%
+			\parbox[t][30mm][t]{74mm}{\vspace*{5px} \txtsize
+				
+				\textbf{\normalsize\gefahr}\\[2pt]
+				
+				{\ghsh{225} \par \ghsh{319}}\\[6pt]
+			{\ghsp{210}, \ghsp{240}, \ghsp{305+351+338}, \ghsp{403+233}}\\[2pt]
+				
+				\vfill
+				\rule[2pt]{74mm}{1pt}\\
+				\tiny\Firm\hfill\filedate}}}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\genericlabel{%
+	\raisebox{12em}{\parbox[t][10em][t]{80mm}{
+			
+			\textbf{\Large Essigsäureethylester}
+			
+			\parbox[t][59mm][t]{15mm}{\mbox{}\\
+				\ifthenelse{\isundefined{\ghspic{flame}}}{}{%
+	\resizebox{12.5mm}{!}{\ghspic{flame}}}
+\ifthenelse{\isundefined{\ghspic{exclam}}}{}{%
+	\resizebox{12.5mm}{!}{\ghspic{exclam}}}
+				
+			}\hspace{4pt}%
+			\parbox[t][30mm][t]{74mm}{\vspace*{5px} \txtsize
+				
+				\textbf{\normalsize\gefahr}\\[2pt]
+				
+				{\ghsh{225} \par \ghsh{319}\par \ghsh{336} \ghseuh{066}}\\[6pt]
+				{\ghsp{210}, \ghsp{233}, \ghsp{240}, \ghsp{305+351+338}, \ghsp{403+235}}\\[2pt]
+				
+				\vfill
+				\rule[2pt]{74mm}{1pt}\\
+				\tiny\Firm\hfill\filedate
+}}}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\genericlabel{%
+	\raisebox{12em}{\parbox[t][10em][t]{80mm}{
+			
+			\textbf{\Large Methyl-\textit{tert}-butylether}
+			
+			\parbox[t][59mm][t]{15mm}{\mbox{}\\
+				\ifthenelse{\isundefined{\ghspic{flame}}}{}{%
+					\resizebox{12.5mm}{!}{\ghspic{flame}}}
+				\ifthenelse{\isundefined{\ghspic{exclam}}}{}{%
+					\resizebox{12.5mm}{!}{\ghspic{exclam}}}
+				
+			}\hspace{4pt}%
+			\parbox[t][30mm][t]{74mm}{\vspace*{5px} \txtsize
+				
+				\textbf{\normalsize\gefahr}\\[2pt]
+				
+				{\ghsh{225} \par \ghsh{315}}\\[6pt]
+				{\ghsp{210}, \ghsp{233}, \ghsp{240}, \ghsp{302+352}, \ghsp{403+235}}\\[2pt]
+				
+				\vfill
+				\rule[2pt]{74mm}{1pt}\\
+				\tiny\Firm\hfill\filedate}}}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\genericlabel{%
+	\raisebox{12em}{\parbox[t][10em][t]{80mm}{
+			
+			\textbf{\Large Methanol}
+			
+			\parbox[t][59mm][t]{12mm}{\mbox{}\\
+				\ifthenelse{\isundefined{\ghspic{flame}}}{}{%
+					\resizebox{12.5mm}{!}{\ghspic{flame}}}
+				\ifthenelse{\isundefined{\ghspic{skull}}}{}{%
+					\resizebox{12.5mm}{!}{\ghspic{skull}}}
+				\ifthenelse{\isundefined{\ghspic{health}}}{}{%
+					\resizebox{12.5mm}{!}{\ghspic{health}}}
+				
+			}\hspace{4pt}%
+			\parbox[t][22mm][t]{74mm}{\vspace*{5px} \txtsize
+				
+				\textbf{\normalsize\gefahr}\\[2pt]
+				
+				{\ghsh{225} \par \ghsh{331}\par \ghsh{311}\par \ghsh{301}\par \ghsh{370}}\\[6pt]
+				{\ghsp{210}, \ghsp{233}, \ghsp{280}, \ghsp{302+352}, \ghsp{304+340}, \ghsp{403+235}}\\[2pt]
+				
+				\vfill
+				\rule[2pt]{74mm}{1pt}\\
+				\tiny\Firm\hfill\filedate
+}}}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{document}
+
