@@ -1,4 +1,4 @@
-# GHS-Label for Latex
+# GHS-label template for Latex
 
 Inspiration: to get chemicals in my university, you have to label them correctly. 
 
