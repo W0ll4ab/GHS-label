@@ -7,3 +7,5 @@ Therefore I created based on Rolands's template/work: https://rsmith.home.xs4all
 
 Useful links:
 - https://ctan.org/pkg/ghsystem?lang=en
+
+note: I compile with lualatex, language changes can be easily done, see comments in .tex file 
